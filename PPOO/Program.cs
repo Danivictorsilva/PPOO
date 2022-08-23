@@ -6,7 +6,7 @@ namespace PPOO
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
