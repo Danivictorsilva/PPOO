@@ -8,10 +8,9 @@ namespace PPOO
 {
     internal class Pessoa
     {
-        String Nome;
-        String CPF;
-        String Telefone;
-        DateTime Date;
+        protected String Nome;
+        protected String CPF;
+        protected DateTime DataNcto;   
 
         public Pessoa() { }
         public void setNome ()
@@ -32,40 +31,27 @@ namespace PPOO
         {
             return this.CPF;
         }
-        public void setTelefone()
-        {
-            Console.Write("Digite o Telefone: ");
-            this.Telefone = Console.ReadLine();
-        }
-        public String getTelefone()
-        {
-            return this.Telefone;
-        }
-        public void setDate()
+        public void setDataNcto()
         {
             Console.Write("Digite a Data de Nascimento: ");
-            this.Date = DateTime.Parse(Console.ReadLine());
+            this.DataNcto = DateTime.Parse(Console.ReadLine());
         }
-        public String getDate()
+        public String getDataNcto()
         {
-            return this.Date.ToShortDateString();
+            return this.DataNcto.ToShortDateString();
         }
-
-        public void ImprimirCadastro()
+        public override string ToString()
         {
-             Console.WriteLine("{{'Nome': {0}, " +
-                "'Data de Nascimento': {1}, " +
-                "'CPF': {2}, " +
-                "'Telefone': {3}}}", 
-                this.Nome, this.Date.ToShortDateString(), this.CPF, this.Telefone);
+             return String.Format("{{'Nome': {0},\n" +
+                "'Data de Nascimento': {1},\n" +
+                "'CPF': {2}}}", 
+                getNome(),getDataNcto(),getCPF());
         }
-
         public void CadastrarPessoa()
         {
             setNome();
-            setDate();
+            setDataNcto();
             setCPF();
-            setTelefone();
         }
     }
 }

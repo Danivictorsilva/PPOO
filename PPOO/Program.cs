@@ -5,10 +5,18 @@ namespace PPOO
     {
         static void Main(string[] args)
         {
-            Pessoa pessoa = new();
+            Pessoa pessoa = new Pessoa();
+            Aluno aluno = new Aluno();
+            Funcionario funcionario = new Funcionario();
 
-            pessoa.CadastrarPessoa();
-            pessoa.ImprimirCadastro();
+            //aluno.CadastrarAluno();
+            //Console.WriteLine(aluno);
+
+            //pessoa.CadastrarPessoa();
+            //Console.WriteLine(pessoa);
+
+            funcionario.CadastrarFuncionario();
+            Console.WriteLine(funcionario);
         }
     }
 }
