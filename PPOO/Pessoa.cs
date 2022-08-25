@@ -8,50 +8,25 @@ namespace PPOO
 {
     internal class Pessoa
     {
-        protected String Nome;
-        protected String CPF;
-        protected DateTime DataNcto;   
+        public String Nome { get; set; }
+        public String CPF { get; set; }
+
+        public Endereco Endereco { get; set; }
 
         public Pessoa() { }
-        public void setNome ()
-        {
-            Console.Write("Digite o nome: ");
-            this.Nome = Console.ReadLine();
-        }
-        public String getNome ()
-        {
-            return this.Nome;
-        }
-        public void setCPF()
-        {
-            Console.Write("Digite o CPF: ");
-            this.CPF = Console.ReadLine();
-        }
-        public String getCPF()
-        {
-            return this.CPF;
-        }
-        public void setDataNcto()
-        {
-            Console.Write("Digite a Data de Nascimento: ");
-            this.DataNcto = DateTime.Parse(Console.ReadLine());
-        }
-        public String getDataNcto()
-        {
-            return this.DataNcto.ToShortDateString();
-        }
+
         public override string ToString()
         {
              return String.Format("{{'Nome': {0},\n" +
-                "'Data de Nascimento': {1},\n" +
-                "'CPF': {2}}}", 
-                getNome(),getDataNcto(),getCPF());
+                "'CPF': {1},\n" +
+                "'Rua': {2},\n" +
+                "'Numero': {3}}}", 
+                Nome,CPF, Endereco.Rua, Endereco.Numero);
         }
-        public void CadastrarPessoa()
+        /*public void CadastrarPessoa()
         {
             setNome();
-            setDataNcto();
             setCPF();
-        }
+        }*/
     }
 }
