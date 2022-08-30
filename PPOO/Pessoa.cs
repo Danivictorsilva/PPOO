@@ -10,9 +10,7 @@ namespace PPOO
     {
         public String Nome { get; set; }
         public String CPF { get; set; }
-
         public Endereco Endereco { get; set; }
-
         public Pessoa() { }
 
         public override string ToString()
