@@ -10,6 +10,5 @@ namespace PPOO
     {
         public String Rua { get; set; }
         public int Numero { get; set; }
-
     }
 }
