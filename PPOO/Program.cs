@@ -5,19 +5,11 @@ namespace PPOO
     {
         static void Main(string[] args)
         {
-            Pessoa pessoa = new Pessoa
-            {
-                CPF = "390",
-                Nome = "Daniel",
-                Endereco = new Endereco
-                {
-                    Rua = "Rua Const do Oitante",
-                    Numero = 73
-                }
-            };
+            Pessoa pessoa = new Pessoa();
 
+            pessoa.CadastrarPessoa();
+            Console.Clear();
             Console.WriteLine(pessoa);
-
         }
     }
 }
